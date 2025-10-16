@@ -48,7 +48,7 @@ export default function Sidebar() {
         <div className="mb-6">
           <h3 className="text-lg font-semibold text-foreground mb-3">About</h3>
           <span className="text-muted">
-            ⚡ BestSpeed – Fast & Trusted Game Boosting Services 🟢 Available
+            ⚡ BestSpeed – Fast & Trusted Game Boosting Services <br />🟢 Available
             24/7 🚀 Delivery Time: Usually within 1–15 minutes after your order
             is received (mostly instant!) <br />
             <br /> Got any questions about our services? Need a custom order,
