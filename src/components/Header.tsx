@@ -133,7 +133,7 @@ export default function Header() {
           <div className="flex items-center gap-1 cursor-pointer hover:bg-card rounded-lg transition-colors">
             <span className="text-foreground font-medium">USD</span>
             <svg
-              className="w-4 h-4 text-text-muted"
+              className="w-4 h-4 text-muted"
               fill="none"
               stroke="white"
               viewBox="0 0 24 24"

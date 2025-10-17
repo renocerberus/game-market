@@ -30,16 +30,16 @@ export default function RatingStars({
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
   
   return (
-    <div className={`flex items-center gap-1 ${sizeClasses[size]}`}>
+    <div className={`flex flex-col items-end gap-1 ${sizeClasses[size]}`}>
       <div className="flex items-center">
         {/* Full stars */}
         {Array.from({ length: fullStars }).map((_, i) => (
-          <span key={i} className={`${starSize[size]} text-accent-gold`}>★</span>
+          <span key={i} className={`${starSize[size]} text-[#F59E0B]`}>★</span>
         ))}
         
         {/* Half star */}
         {hasHalfStar && (
-          <span className={`${starSize[size]} text-accent-gold`}>★</span>
+          <span className={`${starSize[size]} text-[#F59E0B]`}>★</span>
         )}
         
         {/* Empty stars */}
@@ -49,8 +49,8 @@ export default function RatingStars({
       </div>
       
       {showCount && (
-        <span className="text-text-muted ml-1">
-          {rating} {reviewCount && `(${reviewCount} reviews)`}
+        <span className="text-muted ml-1">
+          {reviewCount && `(${reviewCount} reviews)`}
         </span>
       )}
     </div>

@@ -180,7 +180,7 @@ export default function MainContent() {
         <button className="pb-2 px-3 xl:px-4 text-accent-blue font-medium border-b-2 border-accent-blue text-sm xl:text-base">
           BestSpeed markets
         </button>
-        <button className="pb-2 px-3 xl:px-4 text-text-muted hover:text-foreground transition-colors text-sm xl:text-base">
+        <button className="pb-2 px-3 xl:px-4 text-muted hover:text-foreground transition-colors text-sm xl:text-base">
           Recent reviews
         </button>
       </div>
@@ -196,7 +196,7 @@ export default function MainContent() {
               className="rounded-lg pr-4 py-2 text-sm placeholder:text-muted text-foreground w-60 xl:w-80"
               placeholder="Search markets..."
             />
-            <SearchIcon className="w-4 h-4 xl:w-5 xl:h-5 text-text-muted" />
+            <SearchIcon className="w-4 h-4 xl:w-5 xl:h-5 text-muted" />
           </div>
         </div>
 
@@ -207,11 +207,11 @@ export default function MainContent() {
         </div>
 
         {/* Pagination mock */}
-        <div className="flex flex-col xl:flex-row xl:items-center justify-between mt-4 xl:mt-6 text-text-muted gap-3 xl:gap-0">
+        <div className="flex flex-col xl:flex-row xl:items-center justify-between mt-4 xl:mt-6 text-muted gap-3 xl:gap-0">
           <div className="flex items-center gap-3 xl:gap-4">
             <div className="bg-background border-1 border-[#374151] rounded-lg px-2 py-2 flex items-center gap-1">
               <span className="text-muted text-xs xl:text-sm">10</span>
-              <ChevronDown className="w-4 h-4 xl:w-5 xl:h-5 text-text-muted" />
+              <ChevronDown className="w-4 h-4 xl:w-5 xl:h-5 text-muted" />
             </div>
             <span className="text-muted text-xs xl:text-sm">
               Showing <b>1</b> of 10 from <b>20</b> Results

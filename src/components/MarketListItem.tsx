@@ -24,7 +24,7 @@ export default function MarketListItem({
         <Avatar size="md" src={gameIcon} alt={gameTitle} className="w-11 h-11" />
         <div>
           <h3 className="text-foreground font-medium">{gameTitle}</h3>
-          <p className="text-text-muted text-sm">{listingCount} listings</p>
+          <p className="text-muted text-sm">{listingCount} listings</p>
         </div>
       </div>
       <RatingStars rating={rating} reviewCount={reviewCount} size="sm" />

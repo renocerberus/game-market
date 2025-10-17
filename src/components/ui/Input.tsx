@@ -14,7 +14,7 @@ export default function Input({
   return (
     <div className="relative">
       {icon && iconPosition === 'left' && (
-        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-muted">
+        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted">
           {icon}
         </div>
       )}
@@ -31,7 +31,7 @@ export default function Input({
         {...props}
       />
       {icon && iconPosition === 'right' && (
-        <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-text-muted">
+        <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted">
           {icon}
         </div>
       )}
