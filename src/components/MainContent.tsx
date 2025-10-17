@@ -3,7 +3,7 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import MarketListItem from "./MarketListItem";
 import Image from "next/image";
-import { ChevronDown, ChevronLeftIcon, ChevronRight, SearchIcon } from "lucide-react";
+import { ChevronDown, ChevronRight, SearchIcon } from "lucide-react";
 
 export default function MainContent() {
   const products = [
@@ -116,25 +116,25 @@ export default function MainContent() {
   ];
 
   return (
-    <main className="flex-1 pb-6 px-6 pt-2">
+    <main className="flex-1 pb-4 xl:pb-6 px-3 xl:px-6 pt-2 min-w-0">
       {/* Newest Products Section */}
-      <div className="mb-8">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-foreground">
+      <div className="mb-6 xl:mb-8">
+        <div className="flex items-center justify-between mb-3 xl:mb-4">
+          <h2 className="text-base xl:text-lg font-semibold text-foreground">
             Newest products
           </h2>
-          <div className="flex gap-2 mt-2">
+          <div className="flex gap-1 xl:gap-2 mt-2">
             <div
               className="w-fit mb-4 rounded-full gradient-button-border opacity-25"
               style={{ padding: "1px" }}
             >
-              <div className="flex items-center gap-2 gradient-button px-2 py-2 rounded-full">
+              <div className="flex items-center gap-2 gradient-button px-1.5 xl:px-2 py-1.5 xl:py-2 rounded-full">
                 <Image
                   src="/icons/arrow.svg"
                   alt="arrow left"
-                  width={16}
-                  height={16}
-                  className="text-foreground rotate-180"
+                  width={14}
+                  height={14}
+                  className="text-foreground rotate-180 xl:w-4 xl:h-4"
                 />
               </div>
             </div>
@@ -142,22 +142,22 @@ export default function MainContent() {
               className="w-fit mb-4 rounded-full gradient-button-border cursor-pointer"
               style={{ padding: "1px" }}
             >
-              <div className="flex items-center gap-2 gradient-button px-2 py-2 rounded-full">
+              <div className="flex items-center gap-2 gradient-button px-1.5 xl:px-2 py-1.5 xl:py-2 rounded-full">
                 <Image
                   src="/icons/arrow.svg"
                   alt="arrow right"
-                  width={16}
-                  height={16}
-                  className="text-foreground"
+                  width={14}
+                  height={14}
+                  className="text-foreground xl:w-4 xl:h-4"
                 />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative">
-          <div className="w-260 overflow-x-auto pb-4 hide-scrollbar relative">
-            <div className="flex gap-4 w-max snap-x snap-mandatory">
+        <div className="w-full relative overflow-hidden">
+          <div className="w-full overflow-x-auto pb-4 hide-scrollbar relative">
+            <div className="flex gap-3 xl:gap-4 w-max snap-x snap-mandatory">
               {products.map((product, index) => (
                 <div key={index} className="flex-none snap-start">
                   <ProductCard {...product} />
@@ -176,55 +176,55 @@ export default function MainContent() {
       </div>
 
       {/* Navigation Tabs */}
-      <div className="flex gap-6 mb-6 border-b border-gray-700">
-        <button className="pb-2 px-4 text-accent-blue font-medium border-b-2 border-accent-blue">
+      <div className="flex gap-4 xl:gap-6 mb-4 xl:mb-6 border-b border-gray-700">
+        <button className="pb-2 px-3 xl:px-4 text-accent-blue font-medium border-b-2 border-accent-blue text-sm xl:text-base">
           BestSpeed markets
         </button>
-        <button className="pb-2 px-4 text-text-muted hover:text-foreground transition-colors">
+        <button className="pb-2 px-3 xl:px-4 text-text-muted hover:text-foreground transition-colors text-sm xl:text-base">
           Recent reviews
         </button>
       </div>
 
       {/* BestSpeed Markets Section */}
-      <div className="bg-card p-4 rounded-lg border-1 border-[#374151]">
-        <div className="flex items-center justify-between mb-4">
-          <div className="text-lg font-semibold text-foreground">
+      <div className="bg-card p-3 xl:p-4 rounded-lg border-1 border-[#374151]">
+        <div className="flex flex-col xl:flex-row xl:items-center justify-between mb-4 gap-3 xl:gap-0">
+          <div className="text-base xl:text-lg font-semibold text-foreground">
             BestSpeed markets
           </div>
-          <div className="bg-background rounded-xl px-4 py-1 flex items-center gap-2 border-1 border-[#374151]">
+          <div className="bg-background rounded-xl px-3 xl:px-4 py-1 flex items-center gap-2 border-1 border-[#374151]">
             <input
-              className="rounded-lg pr-4 py-2 text-sm placeholder:text-muted text-foreground w-80"
+              className="rounded-lg pr-4 py-2 text-sm placeholder:text-muted text-foreground w-60 xl:w-80"
               placeholder="Search markets..."
             />
-            <SearchIcon className="w-5 h-5 text-text-muted" />
+            <SearchIcon className="w-4 h-4 xl:w-5 xl:h-5 text-text-muted" />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 xl:gap-4">
           {markets.map((m, idx) => (
             <MarketListItem key={idx} {...m} />
           ))}
         </div>
 
         {/* Pagination mock */}
-        <div className="flex items-center justify-between mt-6 text-text-muted">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col xl:flex-row xl:items-center justify-between mt-4 xl:mt-6 text-text-muted gap-3 xl:gap-0">
+          <div className="flex items-center gap-3 xl:gap-4">
             <div className="bg-background border-1 border-[#374151] rounded-lg px-2 py-2 flex items-center gap-1">
-              <span className="text-muted text-sm">10</span>
-              <ChevronDown className="w-5 h-5 text-text-muted" />
+              <span className="text-muted text-xs xl:text-sm">10</span>
+              <ChevronDown className="w-4 h-4 xl:w-5 xl:h-5 text-text-muted" />
             </div>
-            <span className="text-muted text-sm">
+            <span className="text-muted text-xs xl:text-sm">
               Showing <b>1</b> of 10 from <b>20</b> Results
             </span>
           </div>
-          <div className="flex items-center">
-            <button className="bg-[#374151] rounded-lg px-2 py-1 text-white">
+          <div className="flex items-center gap-1 xl:gap-2">
+            <button className="bg-[#374151] rounded-lg px-2 py-1 text-white text-xs xl:text-sm">
               01
             </button>
-            <button className="rounded-lg px-2 py-1 text-muted">02</button>
-            <button className="rounded-lg px-2 py-1 flex items-center gap-2 text-white">
+            <button className="rounded-lg px-2 py-1 text-muted text-xs xl:text-sm">02</button>
+            <button className="rounded-lg px-2 py-1 flex items-center gap-1 xl:gap-2 text-white text-xs xl:text-sm">
               Next{" "}
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 xl:w-5 xl:h-5" />
             </button>
           </div>
         </div>

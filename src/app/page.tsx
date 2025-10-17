@@ -4,7 +4,7 @@ import MainContent from "@/components/MainContent";
 export default function Home() {
   return (
     <div
-      className="min-h-screen px-45"
+      className="min-h-screen px-4 xl:px-12 2xl:px-45"
       style={{
         backgroundImage:
           "linear-gradient(180deg, rgba(17, 24, 39, 0) 0%, #111827 100%), url(/background.png)",
@@ -13,7 +13,7 @@ export default function Home() {
         backgroundRepeat: "no-repeat, no-repeat",
       }}
     >
-      <div className="flex">
+      <div className="flex gap-2 xl:gap-4">
         <Sidebar />
         <MainContent />
       </div>
