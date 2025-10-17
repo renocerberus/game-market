@@ -31,7 +31,7 @@ export default function RatingStars({
   
   return (
     <div className={`flex flex-col items-end gap-1 ${sizeClasses[size]}`}>
-      <div className="flex items-center">
+      <div className="flex items-center gap-1">
         {/* Full stars */}
         {Array.from({ length: fullStars }).map((_, i) => (
           <span key={i} className={`${starSize[size]} text-[#F59E0B]`}>★</span>
