@@ -18,9 +18,7 @@ export default function Card({
   };
   
   return (
-    <div className={`bg-card rounded-lg ${paddingClasses[padding]} ${className}`} style={{
-      border: "1px solid #374151",
-    }}>
+    <div className={`bg-card rounded-lg border border-border ${paddingClasses[padding]} ${className}`}>
       {children}
     </div>
   );

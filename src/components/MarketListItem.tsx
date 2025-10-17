@@ -1,7 +1,6 @@
 import React from 'react';
 import Avatar from './ui/Avatar';
 import RatingStars from './ui/RatingStars';
-import Image from 'next/image';
 
 interface MarketListItemProps {
   gameIcon: string;

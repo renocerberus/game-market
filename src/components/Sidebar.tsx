@@ -7,10 +7,7 @@ export default function Sidebar() {
   return (
     <aside className="w-64 xl:w-72 2xl:w-80 py-4 xl:py-6 flex-shrink-0">
       <Card className="h-full flex flex-col justify-between">
-        <div
-          className="flex flex-col border-b gap-3 items-center justify-center"
-          style={{ borderColor: "#374151" }}
-        >
+        <div className="flex flex-col border-b border-border gap-3 items-center justify-center">
           {/* Profile Header */}
           <div className="text-center items-center justify-center flex flex-col px-2">
             <Avatar
@@ -32,10 +29,7 @@ export default function Sidebar() {
           </div>
 
           {/* Chat Button */}
-          <div
-            className="w-fit mb-4 xl:mb-6 rounded-xl gradient-button-border"
-            style={{ padding: "1px" }}
-          >
+          <div className="w-fit mb-4 xl:mb-6 rounded-xl gradient-button-border p-px">
             <div className="flex items-center gap-2 gradient-button px-3 xl:px-4 py-2 rounded-xl">
               <Image src="/icons/chat.svg" alt="Heart" width={14} height={14} className="xl:w-4 xl:h-4" />
               <span className="text-foreground text-sm xl:text-base">Chat seller</span>
@@ -80,9 +74,9 @@ export default function Sidebar() {
                 className="object-contain xl:w-[50px] xl:h-[50px] 2xl:w-[62px] 2xl:h-[62px]"
               />
               <div className="bg-white text-center rounded-lg px-0.5 xl:px-1 absolute -bottom-0.5 xl:-bottom-1">
-                <span className="text-[10px] xl:text-xs 2xl:text-sm" style={{ color: "#374151" }}>
+                <span className="text-[10px] xl:text-xs 2xl:text-sm text-text-gray">
                   Level{" "}
-                  <span className="font-semibold" style={{ color: "#5961F3" }}>
+                  <span className="font-semibold text-purple">
                     3
                   </span>
                 </span>
@@ -97,9 +91,9 @@ export default function Sidebar() {
                 className="object-contain xl:w-[50px] xl:h-[50px] 2xl:w-[62px] 2xl:h-[62px]"
               />
               <div className="bg-white text-center rounded-lg px-0.5 xl:px-1 absolute -bottom-0.5 xl:-bottom-1">
-                <span className="text-[10px] xl:text-xs 2xl:text-sm" style={{ color: "#374151" }}>
+                <span className="text-[10px] xl:text-xs 2xl:text-sm text-text-gray">
                   Level{" "}
-                  <span className="font-semibold" style={{ color: "#5961F3" }}>
+                  <span className="font-semibold text-purple">
                     3
                   </span>
                 </span>
@@ -114,9 +108,9 @@ export default function Sidebar() {
                 className="object-contain xl:w-[50px] xl:h-[50px] 2xl:w-[62px] 2xl:h-[62px]"
               />
               <div className="bg-white text-center rounded-lg px-0.5 xl:px-1 absolute -bottom-0.5 xl:-bottom-1">
-                <span className="text-[10px] xl:text-xs 2xl:text-sm" style={{ color: "#374151" }}>
+                <span className="text-[10px] xl:text-xs 2xl:text-sm text-text-gray">
                   Level{" "}
-                  <span className="font-semibold" style={{ color: "#5961F3" }}>
+                  <span className="font-semibold text-purple">
                     4
                   </span>
                 </span>

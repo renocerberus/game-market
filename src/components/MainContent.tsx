@@ -124,10 +124,7 @@ export default function MainContent() {
             Newest products
           </h2>
           <div className="flex gap-1 xl:gap-2 mt-2">
-            <div
-              className="w-fit mb-4 rounded-full gradient-button-border opacity-25"
-              style={{ padding: "1px" }}
-            >
+            <div className="w-fit mb-4 rounded-full gradient-button-border opacity-25 p-px">
               <div className="flex items-center gap-2 gradient-button px-1.5 xl:px-2 py-1.5 xl:py-2 rounded-full">
                 <Image
                   src="/icons/arrow.svg"
@@ -138,10 +135,7 @@ export default function MainContent() {
                 />
               </div>
             </div>
-            <div
-              className="w-fit mb-4 rounded-full gradient-button-border cursor-pointer"
-              style={{ padding: "1px" }}
-            >
+            <div className="w-fit mb-4 rounded-full gradient-button-border cursor-pointer p-px">
               <div className="flex items-center gap-2 gradient-button px-1.5 xl:px-2 py-1.5 xl:py-2 rounded-full">
                 <Image
                   src="/icons/arrow.svg"
@@ -165,18 +159,12 @@ export default function MainContent() {
               ))}
             </div>
           </div>
-          <div
-            className="absolute top-0 right-0 w-10 h-full"
-            style={{
-              background:
-                "linear-gradient(270deg, #131923 8.15%, rgba(17, 24, 39, 0.5) 50.5%, rgba(17, 24, 39, 0) 92.86%)",
-            }}
-          />
+          <div className="absolute top-0 right-0 w-10 h-full bg-gradient-to-l from-shadow via-background/50 to-transparent" />
         </div>
       </div>
 
       {/* Navigation Tabs */}
-      <div className="flex gap-4 xl:gap-6 mb-4 xl:mb-6 border-b border-gray-700">
+      <div className="flex gap-4 xl:gap-6 mb-4 xl:mb-6 border-b border-border-gray-700">
         <button className="pb-2 px-3 xl:px-4 text-accent-blue font-medium border-b-2 border-accent-blue text-sm xl:text-base">
           BestSpeed markets
         </button>
@@ -186,12 +174,12 @@ export default function MainContent() {
       </div>
 
       {/* BestSpeed Markets Section */}
-      <div className="bg-card p-3 xl:p-4 rounded-lg border-1 border-[#374151]">
+      <div className="bg-card p-3 xl:p-4 rounded-lg border border-border">
         <div className="flex flex-col xl:flex-row xl:items-center justify-between mb-4 gap-3 xl:gap-0">
           <div className="text-base xl:text-lg font-semibold text-foreground">
             BestSpeed markets
           </div>
-          <div className="bg-background rounded-xl px-3 xl:px-4 py-1 flex items-center gap-2 border-1 border-[#374151]">
+          <div className="bg-background rounded-xl px-3 xl:px-4 py-1 flex items-center gap-2 border border-border">
             <input
               className="rounded-lg pr-4 py-2 text-sm placeholder:text-muted text-foreground w-60 xl:w-80"
               placeholder="Search markets..."
@@ -209,7 +197,7 @@ export default function MainContent() {
         {/* Pagination mock */}
         <div className="flex flex-col xl:flex-row xl:items-center justify-between mt-4 xl:mt-6 text-muted gap-3 xl:gap-0">
           <div className="flex items-center gap-3 xl:gap-4">
-            <div className="bg-background border-1 border-[#374151] rounded-lg px-2 py-2 flex items-center gap-1">
+            <div className="bg-background border border-border rounded-lg px-2 py-2 flex items-center gap-1">
               <span className="text-muted text-xs xl:text-sm">10</span>
               <ChevronDown className="w-4 h-4 xl:w-5 xl:h-5 text-muted" />
             </div>
@@ -218,7 +206,7 @@ export default function MainContent() {
             </span>
           </div>
           <div className="flex items-center gap-1 xl:gap-2">
-            <button className="bg-[#374151] rounded-lg px-2 py-1 text-white text-xs xl:text-sm">
+            <button className="bg-bg-gray-600 rounded-lg px-2 py-1 text-white text-xs xl:text-sm">
               01
             </button>
             <button className="rounded-lg px-2 py-1 text-muted text-xs xl:text-sm">02</button>

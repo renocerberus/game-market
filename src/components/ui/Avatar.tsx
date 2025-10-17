@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface AvatarProps {
   src?: string;
@@ -28,10 +29,10 @@ export default function Avatar({
   return (
     <div className="relative">
       <div
-        className={`${sizeClasses[size]} rounded-full bg-gray-600 flex items-center justify-center overflow-hidden ${className}`}
+        className={`${sizeClasses[size]} rounded-full bg-avatar-bg flex items-center justify-center overflow-hidden ${className}`}
       >
         {src ? (
-          <img src={src} alt={alt} className="w-full h-full object-cover" />
+          <Image src={src} alt={alt} className="w-full h-full object-cover" width={100} height={100} />
         ) : (
           children || (
             <div className="w-full h-full bg-green-500 flex items-center justify-center text-white font-bold">

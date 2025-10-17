@@ -88,7 +88,7 @@ export default function ProductCard({
               Show description
             </button>
 
-            <div className="border-t border-gray-700 mb-3 xl:mb-4" />
+            <div className="border-t border-border mb-3 xl:mb-4" />
 
             <div className="grid grid-cols-3 gap-2 xl:gap-4 text-sm mb-4 xl:mb-6">
               <div>

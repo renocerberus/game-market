@@ -17,8 +17,8 @@ export default function Button({
   
   const variantClasses = {
     primary: 'bg-accent-blue text-white hover:bg-blue-700 focus:ring-accent-blue rounded-lg',
-    secondary: 'bg-card text-foreground hover:bg-gray-600 focus:ring-gray-500 rounded-lg border border-gray-600',
-    icon: 'bg-card text-foreground hover:bg-gray-600 focus:ring-gray-500 rounded-full p-2'
+    secondary: 'bg-card text-foreground hover:bg-hover focus:ring-gray-500 rounded-lg border border-border',
+    icon: 'bg-card text-foreground hover:bg-hover focus:ring-gray-500 rounded-full p-2'
   };
   
   const sizeClasses = {

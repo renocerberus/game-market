@@ -17,7 +17,7 @@ export default function Badge({
     "rounded-full flex items-center justify-center font-medium";
 
   const variantClasses = {
-    default: "bg-card text-foreground border border-gray-600",
+    default: "bg-card text-foreground border border-border",
     notification: "text-white",
     level: "bg-accent-gold text-black",
   };
@@ -28,15 +28,15 @@ export default function Badge({
     lg: "w-12 h-12 text-base",
   };
 
+  const notificationClasses = variant === "notification" 
+    ? "bg-gradient-to-br from-red-gradient-start to-red-gradient-end border border-white" 
+    : "";
+
   return (
     <div
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${notificationClasses} ${className}`}
       style={{
         fontSize: size === "sm" ? "8px" : size === "md" ? "10px" : "12px",
-        ...(variant === "notification" && {
-          background: "linear-gradient(276.98deg, #E40C1E 0%, #A20915 100%)",
-          border: "1px solid rgba(255, 255, 255, 1)",
-        }),
       }}
     >
       {children}

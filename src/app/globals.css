@@ -1,81 +1,89 @@
 @import "tailwindcss";
 
-:root {
-  --background: #111827;
-  --foreground: #FFFFFF;
-  --card-bg: #1F2937;
-  --accent-blue: #3B82F6;
-  --accent-gold: #FCD34D;
-  --accent-red: #EF4444;
-  --text-muted: #D1D5DB;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card-bg);
-  --color-accent-blue: var(--accent-blue);
-  --color-accent-gold: var(--accent-gold);
-  --color-accent-red: var(--accent-red);
-  --color-muted: var(--text-muted);
+  --color-background: #111827;
+  --color-foreground: #FFFFFF;
+  --color-card: #1F2937;
+  --color-accent-blue: #3B82F6;
+  --color-accent-gold: #FCD34D;
+  --color-accent-red: #EF4444;
+  --color-muted: #D1D5DB;
+  --color-border: #374151;
+  --color-border-light: #4B5563;
+  --color-border-dark: #1F2937;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-400: #9CA3AF;
+  --color-hover: #4B5563;
+  --color-border-light-gray: #9CA3AF;
+  --color-text-gray: #4B5563;
+  --color-border-gray-700: #374151;
+  --color-bg-gray-600: #4B5563;
+  --color-avatar-bg: #4B5563;
+  --color-purple: #5961F3;
+  --color-red-gradient-start: #E40C1E;
+  --color-red-gradient-end: #A20915;
+  --color-orange: #F59E0B;
+  --color-blue-gradient-start: #00A8E9;
+  --color-blue-gradient-end: #5961F3;
+  --color-header-gradient: #363B9F;
+  --color-shadow: #131923;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  min-height: 100vh;
+  @apply bg-background text-foreground font-sans min-h-screen;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  @apply w-1.5;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--card-bg);
+  @apply bg-card;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-muted);
-  border-radius: 3px;
+  @apply bg-muted rounded-sm;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--foreground);
+  @apply bg-foreground;
 }
 
 /* Line clamp utility */
 .line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  @apply line-clamp-2;
+}
+
+.line-clamp-3 {
+  @apply line-clamp-3;
 }
 
 /* Smooth scrolling */
 html {
-  scroll-behavior: smooth;
+  @apply scroll-smooth;
 }
 
 /* Focus styles */
 *:focus {
-  outline: none;
+  @apply outline-none;
 }
 
 /* Selection styles */
 ::selection {
-  background: var(--accent-blue);
-  color: white;
+  @apply bg-accent-blue text-white;
 }
+
+/* Custom gradient utilities */
 .gradient-button {
-  background: rgba(0, 0, 0, 0.5);
+  @apply bg-black/50;
 }
+
 .gradient-button-border {
-  background: linear-gradient(276.98deg, #00A8E9 0%, #5961F3 100%);
+  background: linear-gradient(276.98deg, var(--color-blue-gradient-start) 0%, var(--color-blue-gradient-end) 100%);
 }
 
 /* Hide scrollbars while retaining scroll functionality */
@@ -89,4 +97,8 @@ html {
 
 .gradient-background {
   background: linear-gradient(108.93deg, rgba(31, 41, 55, 0) 46.97%, rgba(72, 78, 201, 0.3) 100%);
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(27.22% 77.17% at 48.72% 50%, var(--color-header-gradient) 0%, var(--color-card) 100%);
 }

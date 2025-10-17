@@ -6,13 +6,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header
-      className="sticky top-0 z-50 px-8 py-3"
-      style={{
-        background:
-          "radial-gradient(27.22% 77.17% at 48.72% 50%, #363B9F 0%, #1F2937 100%)",
-      }}
-    >
+    <header className="sticky top-0 z-50 px-8 py-3 bg-gradient-radial">
       <div className="flex items-center">
         {/* Logo */}
         <div className="flex-1 items-center">
@@ -26,14 +20,10 @@ export default function Header() {
 
         {/* Search Bar */}
         <div className="flex-1">
-          <div
-            className="max-w-md mx-8 rounded-lg"
-            style={{ border: "1px solid rgba(55, 65, 81, 1)" }}
-          >
+          <div className="max-w-md mx-8 rounded-lg border border-border">
             <Input
               placeholder="Browse 1.700+ game markets..."
-              className="w-full placeholder:text-white"
-              style={{ background: "rgba(17, 24, 39, 1)" }}
+              className="w-full placeholder:text-white bg-background"
               icon={
                 <svg
                   className="w-4 h-4 text-white"
@@ -58,7 +48,7 @@ export default function Header() {
           {/* Notification Icons */}
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-gray-600 transition-colors">
+              <div className="w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-hover transition-colors rounded">
                 <Image
                   src="/icons/cart.svg"
                   alt="Cart"
@@ -76,7 +66,7 @@ export default function Header() {
             </div>
 
             <div className="relative">
-              <div className="w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-gray-600 transition-colors">
+              <div className="w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-hover transition-colors rounded">
                 <Image
                   src="/icons/notification.svg"
                   alt="Heart"
@@ -94,7 +84,7 @@ export default function Header() {
             </div>
 
             <div className="relative">
-              <div className="w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-gray-600 transition-colors">
+              <div className="w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-hover transition-colors rounded">
                 <Image
                   src="/icons/chat.svg"
                   alt="Heart"
@@ -113,13 +103,7 @@ export default function Header() {
           </div>
 
           {/* Balance Display */}
-          <div
-            className="flex items-center gap-2 p-2 rounded-xl"
-            style={{
-              background: "rgba(17, 24, 39, 1)",
-              border: "1px solid rgba(100, 100, 100, 1)",
-            }}
-          >
+          <div className="flex items-center gap-2 p-2 rounded-xl bg-background border border-border-light-gray">
             <Image src="/coin.png" alt="dollar" width={20} height={20} />
             <span className="text-foreground font-semibold">$99,999.00</span>
           </div>

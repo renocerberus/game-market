@@ -34,17 +34,17 @@ export default function RatingStars({
       <div className="flex items-center gap-1">
         {/* Full stars */}
         {Array.from({ length: fullStars }).map((_, i) => (
-          <span key={i} className={`${starSize[size]} text-[#F59E0B]`}>★</span>
+          <span key={i} className={`${starSize[size]} text-orange`}>★</span>
         ))}
         
         {/* Half star */}
         {hasHalfStar && (
-          <span className={`${starSize[size]} text-[#F59E0B]`}>★</span>
+          <span className={`${starSize[size]} text-orange`}>★</span>
         )}
         
         {/* Empty stars */}
         {Array.from({ length: emptyStars }).map((_, i) => (
-          <span key={i} className={`${starSize[size]} text-gray-600`}>★</span>
+          <span key={i} className={`${starSize[size]} text-text-gray`}>★</span>
         ))}
       </div>
       

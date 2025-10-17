@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="px-45 py-8" style={{ background: "#111827" }}>
+    <footer className="px-45 py-8 bg-background">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-20">
         {/* Logo and Description */}
         <div className="flex flex-col gap-4 col-span-2">
@@ -111,7 +111,7 @@ export default function Footer() {
           <div className="flex gap-2">
             <a
               href="#"
-              className="w-8 h-8 flex items-center justify-center hover:bg-gray-600 transition-colors"
+              className="w-8 h-8 flex items-center justify-center hover:bg-hover transition-colors"
             >
               <Image
                 src="/icons/facebook.svg"
@@ -122,7 +122,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="w-8 h-8 flex items-center justify-center hover:bg-gray-600 transition-colors"
+              className="w-8 h-8 flex items-center justify-center hover:bg-hover transition-colors"
             >
               <Image
                 src="/icons/x.svg"
@@ -133,7 +133,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="w-8 h-8 flex items-center justify-center hover:bg-gray-600 transition-colors"
+              className="w-8 h-8 flex items-center justify-center hover:bg-hover transition-colors"
             >
               <Image
                 src="/icons/instagram.svg"
